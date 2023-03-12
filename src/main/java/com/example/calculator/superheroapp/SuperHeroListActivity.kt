@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.util.Log
 import android.view.KeyEvent.DispatcherState
 import androidx.appcompat.widget.SearchView
+import androidx.core.view.isVisible
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.calculator.R
 import com.example.calculator.databinding.ActivitySuperHeroListBinding
 import kotlinx.coroutines.CoroutineScope
@@ -20,6 +22,8 @@ class SuperHeroListActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySuperHeroListBinding
     //Retrofit
     private lateinit var retrofit: Retrofit
+    private lateinit var adapter: SuperheroAdapter
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySuperHeroListBinding.inflate(layoutInflater)
@@ -37,16 +41,27 @@ class SuperHeroListActivity : AppCompatActivity() {
 
             override fun onQueryTextChange(newText: String?): Boolean = false
         })
+
+        adapter = SuperheroAdapter()
+        binding.rvSuperhero.setHasFixedSize(true)
+        binding.rvSuperhero.layoutManager = LinearLayoutManager(this)
+        binding.rvSuperhero.adapter = adapter
+
     }
 
     private fun searchByName(query: String) {
+        binding.progressBar.isVisible = true
         CoroutineScope(Dispatchers.IO).launch {
             val myResponse: Response<SuperHeroDataResponse> = retrofit.create(ApiService::class.java).getSuperheros(query)
             if(myResponse.isSuccessful){
                 Log.d(  TAG_RETROFIT, "Working")
                 val response: SuperHeroDataResponse? = myResponse.body()
                 if(response != null){
-
+                    Log.d(  TAG_RETROFIT, response.superheros.toString())
+                    runOnUiThread {
+                        adapter.updateList(response.superheros)
+                        binding.progressBar.isVisible = false
+                    }
                 }
             }else{
 
@@ -59,7 +74,7 @@ class SuperHeroListActivity : AppCompatActivity() {
     private fun getRetrofit():Retrofit{
         return  Retrofit
             .Builder()
-            .baseUrl("https://superheroapi.com/api/")
+            .baseUrl("https://superheroapi.com/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }
