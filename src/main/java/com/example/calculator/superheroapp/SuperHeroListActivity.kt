@@ -2,11 +2,65 @@ package com.example.calculator.superheroapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.view.KeyEvent.DispatcherState
+import androidx.appcompat.widget.SearchView
 import com.example.calculator.R
-
+import com.example.calculator.databinding.ActivitySuperHeroListBinding
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import retrofit2.Response
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.create
+const val TAG_RETROFIT = "Retrofit response"
 class SuperHeroListActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivitySuperHeroListBinding
+    //Retrofit
+    private lateinit var retrofit: Retrofit
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_super_hero_list)
+        binding = ActivitySuperHeroListBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        retrofit = getRetrofit()
+        initUI()
+    }
+
+    private fun initUI() {
+        binding.searchView.setOnQueryTextListener(object: SearchView.OnQueryTextListener{
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                searchByName(query.orEmpty())
+                return false
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean = false
+        })
+    }
+
+    private fun searchByName(query: String) {
+        CoroutineScope(Dispatchers.IO).launch {
+            val myResponse: Response<SuperHeroDataResponse> = retrofit.create(ApiService::class.java).getSuperheros(query)
+            if(myResponse.isSuccessful){
+                Log.d(  TAG_RETROFIT, "Working")
+                val response: SuperHeroDataResponse? = myResponse.body()
+                if(response != null){
+
+                }
+            }else{
+
+                Log.d(  TAG_RETROFIT, "Don't working")
+            }
+        }
+    }
+
+    //Retrofit
+    private fun getRetrofit():Retrofit{
+        return  Retrofit
+            .Builder()
+            .baseUrl("https://superheroapi.com/api/")
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
     }
 }
