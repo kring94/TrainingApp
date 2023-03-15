@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Calculator</string>
+    <string name="app_name">Training App</string>
     <string name="man">Hombre</string>
     <string name="women">Mujer</string>
     <string name="height">Altura</string>
@@ -25,4 +25,10 @@
     <string name="add_personal">Personal</string>
     <string name="add_other">Otros</string>
     <string name="add_task_dialog">Tarea</string>
+    <string name="intelligent">Inteligencia</string>
+    <string name="Strength">Fuerza</string>
+    <string name="speed">Velocidad</string>
+    <string name="durability">Durabilidad</string>
+    <string name="power">Poder</string>
+    <string name="combat">Combate</string>
 </resources>
