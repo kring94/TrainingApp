@@ -31,4 +31,10 @@
     <string name="durability">Durabilidad</string>
     <string name="power">Poder</string>
     <string name="combat">Combate</string>
+    <string name="dark_mode">Modo oscuro</string>
+    <string name="dark_mode_description">Activa/Desactiva modo oscuro para un cambio visual</string>
+    <string name="bluetooth_title">Bluetooth</string>
+    <string name="bluetooth_description">Activa/Desactiva configuración bluetooth</string>
+    <string name="volumen_level">Nivel de volumen</string>
+    <string name="vibrate_mode">Activar/Desactivar modo vibrar</string>
 </resources>
