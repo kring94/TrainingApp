@@ -26,16 +26,24 @@
                 android:layout_height="match_parent"
                 android:layout_margin="8dp"
                 app:cardCornerRadius="16dp"
+                android:elevation="8dp"
                 app:cardBackgroundColor="@color/background_card_color"
                 >
                 <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     >
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/img_android_basics"
+                        />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
+                        android:layout_gravity="center|top"
                         android:textColor="@color/white"
                         android:textStyle="bold|italic"
                         android:text="IMC App"/>
@@ -76,10 +84,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     >
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/img_android_recyclerview"
+                        />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
+                        android:layout_gravity="center|top"
                         android:textColor="@color/white"
                         android:textStyle="bold|italic"
                         android:text="TODO App"/>
@@ -127,10 +142,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     >
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/img_android_retrofit"
+                        />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
+                        android:layout_gravity="center|top"
                         android:textColor="@color/white"
                         android:textStyle="bold|italic"
                         android:text="Superhero App"/>
@@ -171,10 +193,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     >
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/img_android_datastore"
+                        />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
+                        android:layout_gravity="center|top"
                         android:textColor="@color/white"
                         android:textStyle="bold|italic"
                         android:text="Settings App"/>
