@@ -7,6 +7,8 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="background_card_color">#ff516091</color>
     <!--    IMC App-->
     <color name="background_component">#1D1E33</color>
     <color name="background_component_selected">#FF111328</color>
