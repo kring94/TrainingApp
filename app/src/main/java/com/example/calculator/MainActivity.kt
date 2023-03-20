@@ -9,6 +9,7 @@ import com.example.calculator.imcapp.ImcActivity
 import com.example.calculator.settingsapp.SettingsActivity
 import com.example.calculator.superheroapp.SuperHeroListActivity
 import com.example.calculator.todoapp.TodoActivity
+import com.example.calculator.wordsapp.WordsMainActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -23,6 +24,8 @@ class MainActivity : AppCompatActivity() {
             TODOButton.setOnClickListener { navigateToTodoApp() }
             superHeroButton.setOnClickListener { navigateToSuperheroApp() }
             settingsButton.setOnClickListener { navigateToSettingsApp() }
+            navFragmentsButton.setOnClickListener { navigateToWordsApp() }
+
         }
 
     }
@@ -44,6 +47,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun navigateToSettingsApp(){
         val intent = Intent(this,SettingsActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun navigateToWordsApp(){
+        val intent = Intent(this, WordsMainActivity::class.java)
         startActivity(intent)
     }
 }

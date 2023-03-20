@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'androidx.navigation.safeargs.kotlin'
 }
 
 android {
@@ -34,9 +35,20 @@ android {
     viewBinding {
         enable = true
     }
+
+    buildscript {
+        repositories {
+            google()
+        }
+        dependencies {
+            def nav_version = "2.5.3"
+            classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
+        }
+    }
 }
 
 dependencies {
+    def nav_version = "2.5.3"
 
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.1'
@@ -50,6 +62,9 @@ dependencies {
     implementation 'com.squareup.picasso:picasso:2.8'
     //DataStore
     implementation 'androidx.datastore:datastore-preferences:1.0.0'
+    //Fragments - Navigation
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
