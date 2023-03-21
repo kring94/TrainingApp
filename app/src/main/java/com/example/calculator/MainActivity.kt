@@ -3,12 +3,12 @@ package com.example.calculator
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
 import com.example.calculator.databinding.ActivityMainBinding
 import com.example.calculator.imcapp.ImcActivity
 import com.example.calculator.settingsapp.SettingsActivity
 import com.example.calculator.superheroapp.SuperHeroListActivity
 import com.example.calculator.todoapp.TodoActivity
+import com.example.calculator.unscrambleapp.UnscrambleMainActivity
 import com.example.calculator.wordsapp.WordsMainActivity
 
 class MainActivity : AppCompatActivity() {
@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
             superHeroButton.setOnClickListener { navigateToSuperheroApp() }
             settingsButton.setOnClickListener { navigateToSettingsApp() }
             navFragmentsButton.setOnClickListener { navigateToWordsApp() }
-
+            MVVMButton.setOnClickListener { navigateToUnscrambleApp() }
         }
 
     }
@@ -52,6 +52,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun navigateToWordsApp(){
         val intent = Intent(this, WordsMainActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun navigateToUnscrambleApp(){
+        val intent = Intent(this, UnscrambleMainActivity::class.java)
         startActivity(intent)
     }
 }

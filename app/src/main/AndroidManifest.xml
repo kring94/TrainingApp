@@ -14,6 +14,9 @@
         android:theme="@style/Theme.Calculator"
         tools:targetApi="31">
         <activity
+            android:name=".unscrambleapp.UnscrambleMainActivity"
+            android:exported="false" />
+        <activity
             android:name=".wordsapp.WordsMainActivity"
             android:exported="false" />
         <activity
