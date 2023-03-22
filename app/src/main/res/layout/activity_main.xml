@@ -327,7 +327,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:textColor="@color/white"
-                            android:text="MVVM Arch"
+                            android:text="MVVM - LiveData"
                             />
                     </FrameLayout>
                 </FrameLayout>
