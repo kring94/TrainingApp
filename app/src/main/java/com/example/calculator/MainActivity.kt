@@ -3,6 +3,7 @@ package com.example.calculator
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.calculator.cukcakeapp.CupcakeMainActivity
 import com.example.calculator.databinding.ActivityMainBinding
 import com.example.calculator.imcapp.ImcActivity
 import com.example.calculator.settingsapp.SettingsActivity
@@ -26,8 +27,8 @@ class MainActivity : AppCompatActivity() {
             settingsButton.setOnClickListener { navigateToSettingsApp() }
             navFragmentsButton.setOnClickListener { navigateToWordsApp() }
             MVVMButton.setOnClickListener { navigateToUnscrambleApp() }
+            advNavFragmentsButton.setOnClickListener { navigateToCupcakeApp() }
         }
-
     }
 
     private fun navigateToSuperheroApp() {
@@ -57,6 +58,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun navigateToUnscrambleApp(){
         val intent = Intent(this, UnscrambleMainActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun navigateToCupcakeApp(){
+        val intent = Intent(this, CupcakeMainActivity::class.java)
         startActivity(intent)
     }
 }
