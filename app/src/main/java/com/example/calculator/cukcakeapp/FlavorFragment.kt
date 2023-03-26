@@ -6,11 +6,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import com.example.calculator.R
+import com.example.calculator.cukcakeapp.model.OrderViewModel
 import com.example.calculator.databinding.FragmentFlavorBinding
 
 
 class FlavorFragment : Fragment() {
+
+    private val sharedViewModel: OrderViewModel by activityViewModels()
 
     // Binding object instance corresponding to the fragment_flavor.xml layout
     // This property is non-null between the onCreateView() and onDestroyView() lifecycle callbacks,
@@ -30,7 +35,9 @@ class FlavorFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding?.apply {
-            nextButton.setOnClickListener { goToNextScreen() }
+            lifecycleOwner = viewLifecycleOwner
+            viewModel = sharedViewModel
+            flavorFragment = this@FlavorFragment
         }
     }
 
@@ -38,7 +45,7 @@ class FlavorFragment : Fragment() {
      * Navigate to the next screen to choose pickup date.
      */
     fun goToNextScreen() {
-        Toast.makeText(activity, "Next", Toast.LENGTH_SHORT).show()
+        findNavController().navigate(R.id.action_flavorFragment_to_pickupFragment)
     }
 
     /**

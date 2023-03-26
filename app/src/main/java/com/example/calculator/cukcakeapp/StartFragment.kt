@@ -6,11 +6,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import com.example.calculator.R
+import com.example.calculator.cukcakeapp.model.OrderViewModel
 import com.example.calculator.databinding.FragmentStartBinding
 
 
 class StartFragment : Fragment() {
+
+    private val sharedViewModel: OrderViewModel by activityViewModels()
 
     // Binding object instance corresponding to the fragment_start.xml layout
     // This property is non-null between the onCreateView() and onDestroyView() lifecycle callbacks,
@@ -29,19 +34,18 @@ class StartFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding?.apply {
-            // Set up the button click listeners
-            orderOneCupcake.setOnClickListener { orderCupcake(1) }
-            orderSixCupcakes.setOnClickListener { orderCupcake(6) }
-            orderTwelveCupcakes.setOnClickListener { orderCupcake(12) }
-        }
+        binding?.startFragment = this
     }
 
     /**
      * Start an order with the desired quantity of cupcakes and navigate to the next screen.
      */
     fun orderCupcake(quantity: Int) {
-        Toast.makeText(activity, "Ordered $quantity cupcake(s)", Toast.LENGTH_SHORT).show()
+        sharedViewModel.setQuantity(quantity)
+        if (sharedViewModel.hasNoFlavorSet()) {
+            sharedViewModel.setFlavor(getString(R.string.vanilla))
+        }
+        findNavController().navigate(R.id.action_startFragment_to_flavorFragment)
     }
 
     /**
