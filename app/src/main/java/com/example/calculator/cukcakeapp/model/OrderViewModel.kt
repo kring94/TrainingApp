@@ -3,6 +3,7 @@ package com.example.calculator.cukcakeapp.model
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.map
 import java.text.NumberFormat
 import java.text.SimpleDateFormat
 import java.util.*
@@ -23,10 +24,9 @@ class OrderViewModel: ViewModel() {
     val date: LiveData<String> = _date
 
     private val _price = MutableLiveData<Double>()
-    val price: LiveData<String> = Transformations.map(_price) {
+    val price: LiveData<String> = _price.map {
         NumberFormat.getCurrencyInstance().format(it)
     }
-    //val price: LiveData<Double> = _price
 
     private fun updatePrice() {
         var calculatedPrice = (quantity.value ?: 0) * PRICE_PER_CUPCAKE

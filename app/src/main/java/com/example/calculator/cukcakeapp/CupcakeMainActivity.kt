@@ -16,5 +16,14 @@ class CupcakeMainActivity : AppCompatActivity(R.layout.activity_cupcake_main) {
         val navController = navHostFragment.navController
 
         setupActionBarWithNavController(navController)
+
+
     }
+    override fun onSupportNavigateUp(): Boolean {
+        val navHostFragment = supportFragmentManager
+            .findFragmentById(R.id.cupcake_nav_host_fragment) as NavHostFragment
+        val navController = navHostFragment.navController
+        return navController.navigateUp() || super.onSupportNavigateUp()
+    }
+
 }
