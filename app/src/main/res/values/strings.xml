@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Training App</string>
+    <!--    IMC App -->
     <string name="man">Hombre</string>
     <string name="women">Mujer</string>
     <string name="height">Altura</string>
@@ -17,6 +18,7 @@
     <string name="normal_weight_text">Estás en peso ideal para tu altura.</string>
     <string name="over_weight_text">Estás ligeramente por encima del peso para tu altura</string>
     <string name="obesity_text">Estás muy por encima del peso para tu altura, acude al medico.</string>
+    <!--    TODO_ App -->
     <string name="todo_list_title">TODO List</string>
     <string name="todo_categories">Categorias:</string>
     <string name="tasks">Tareas:</string>
@@ -25,6 +27,7 @@
     <string name="add_personal">Personal</string>
     <string name="add_other">Otros</string>
     <string name="add_task_dialog">Tarea</string>
+    <!--    Superhero App -->
     <string name="intelligent">Inteligencia</string>
     <string name="Strength">Fuerza</string>
     <string name="speed">Velocidad</string>
@@ -46,7 +49,7 @@
     <string name="action_switch_layout">Switch Layout</string>
     <string name="look_up_word">Look up word in a Browser Search</string>
     <string name="look_up_words">Show Stored Words</string>
-
+    <!--    Unscramble App -->
     <string name="unscramble_app_name">Unscramble</string>
     <string name="instructions">Unscramble the word using all the letters.</string>
     <string name="skip">Skip</string>
@@ -91,10 +94,32 @@
         <item quantity="one">%d cupcake</item>
         <item quantity="other">%d cupcakes</item>
     </plurals>
-
+    <!--    Bus App -->
     <string name="bus_app_name">Bus Schedule</string>
     <!-- Shown above left column listing bus stops in full schedule fragment -->
     <string name="bus_stop_header">Stop Name</string>
     <!-- Shown above right column listing arrival times in full schedule fragment -->
     <string name="arrival_time_header">Arrival Time</string>
+
+    <!--    Inventory App -->
+    <string name="inventory_app_name">Inventory</string>
+    <string name="sell">Sell</string>
+    <string name="quantity_in">Quantity in Stock:</string>
+    <string name="quantity_req">Quantity in Stock <font color='#FF0000'>*</font></string>
+    <string name="item_name_req">Item Name <font color='#FF0000'>*</font></string>
+    <string name="item_price_req">Item Price <font color='#FF0000'>*</font></string>
+    <string name="save_action">Save</string>
+    <string name="item_detail_fragment_title">Item Details</string>
+    <string name="add_fragment_title">Add Item</string>
+    <string name="edit_fragment_title">Edit Item</string>
+    <string name="price">Price</string>
+    <string name="quantity_in_stock">Quantity\nIn Stock</string>
+    <string name="item">Item</string>
+    <string name="delete">Delete</string>
+    <string name="delete_question">Are you sure you want to delete?</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="currency_symbol">$</string>
+    <string name="edit_item">Edit Item</string>
+    <string name="add_new_item">Add new item</string>
 </resources>

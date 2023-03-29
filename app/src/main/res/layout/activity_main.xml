@@ -1,451 +1,516 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity"
-    android:padding="16dp">
+    android:layout_height="match_parent">
 
     <LinearLayout
+
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity"
+        android:padding="16dp">
 
-        <FrameLayout
-            android:layout_width="0dp"
-            android:layout_height="150dp"
-            android:layout_weight="1"
-            >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/imc_button"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="8dp"
-                app:cardCornerRadius="16dp"
-                android:elevation="8dp"
-                app:cardBackgroundColor="@color/background_card_color"
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_weight="1"
                 >
-                <FrameLayout
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/imc_button"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="16dp"
+                    android:elevation="8dp"
+                    app:cardBackgroundColor="@color/background_card_color"
                     >
-                    <ImageView
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:layout_gravity="center"
-                        android:scaleType="fitCenter"
-                        android:src="@drawable/img_android_basics"
-                        />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center|top"
-                        android:textColor="@color/white"
-                        android:textStyle="bold|italic"
-                        android:text="IMC App"/>
                     <FrameLayout
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:layout_gravity="bottom"
-                        android:background="@color/superhero_item_name"
+                        android:layout_height="match_parent"
                         >
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_gravity="center"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/img_android_basics"
+                            />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
+                            android:layout_gravity="center|top"
                             android:textColor="@color/white"
-                            android:text="Basics"
-                            />
+                            android:textStyle="bold|italic"
+                            android:text="IMC App"/>
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_gravity="bottom"
+                            android:background="@color/superhero_item_name"
+                            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textColor="@color/white"
+                                android:text="Basics"
+                                />
+                        </FrameLayout>
                     </FrameLayout>
-                </FrameLayout>
 
-            </androidx.cardview.widget.CardView>
-        </FrameLayout>
+                </androidx.cardview.widget.CardView>
+            </FrameLayout>
 
-        <FrameLayout
-            android:layout_width="0dp"
-            android:layout_height="150dp"
-            android:layout_weight="1"
-            >
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/TODO_button"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="8dp"
-                app:cardCornerRadius="16dp"
-                app:cardBackgroundColor="@color/background_card_color"
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_weight="1"
                 >
-                <FrameLayout
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/TODO_button"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardBackgroundColor="@color/background_card_color"
                     >
-                    <ImageView
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:layout_gravity="center"
-                        android:scaleType="fitCenter"
-                        android:src="@drawable/img_android_recyclerview"
-                        />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center|top"
-                        android:textColor="@color/white"
-                        android:textStyle="bold|italic"
-                        android:text="TODO App"/>
                     <FrameLayout
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:layout_gravity="bottom"
-                        android:background="@color/superhero_item_name"
+                        android:layout_height="match_parent"
                         >
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_gravity="center"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/img_android_recyclerview"
+                            />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
+                            android:layout_gravity="center|top"
                             android:textColor="@color/white"
-                            android:text="Recycler View"
-                            />
+                            android:textStyle="bold|italic"
+                            android:text="TODO App"/>
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_gravity="bottom"
+                            android:background="@color/superhero_item_name"
+                            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textColor="@color/white"
+                                android:text="Recycler View"
+                                />
+                        </FrameLayout>
                     </FrameLayout>
-                </FrameLayout>
 
-            </androidx.cardview.widget.CardView>
-        </FrameLayout>
+                </androidx.cardview.widget.CardView>
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                >
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/super_hero_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardBackgroundColor="@color/background_card_color"
+                    >
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        >
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_gravity="center"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/img_android_retrofit"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|top"
+                            android:textColor="@color/white"
+                            android:textStyle="bold|italic"
+                            android:text="Superhero App"/>
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_gravity="bottom"
+                            android:background="@color/superhero_item_name"
+                            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textColor="@color/white"
+                                android:text="RV-Retrofit"
+                                />
+                        </FrameLayout>
+                    </FrameLayout>
+
+                </androidx.cardview.widget.CardView>
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                >
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/settings_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardBackgroundColor="@color/background_card_color"
+                    >
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        >
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_gravity="center"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/img_settings"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|top"
+                            android:textColor="@color/white"
+                            android:textStyle="bold|italic"
+                            android:text="Settings App"/>
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_gravity="bottom"
+                            android:background="@color/superhero_item_name"
+                            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textColor="@color/white"
+                                android:text="DataStore"
+                                />
+                        </FrameLayout>
+                    </FrameLayout>
+
+                </androidx.cardview.widget.CardView>
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                >
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/nav_fragments_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardBackgroundColor="@color/background_card_color"
+                    >
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        >
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_gravity="center"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/img_nav_fragments"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|top"
+                            android:textColor="@color/white"
+                            android:textStyle="bold|italic"
+                            android:text="Words App"/>
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_gravity="bottom"
+                            android:background="@color/superhero_item_name"
+                            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textColor="@color/white"
+                                android:text="Nav-Fragments"
+                                />
+                        </FrameLayout>
+                    </FrameLayout>
+
+                </androidx.cardview.widget.CardView>
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                >
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/MVVM_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardBackgroundColor="@color/background_card_color"
+                    >
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        >
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_gravity="center"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/img_mvvm"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|top"
+                            android:textColor="@color/white"
+                            android:textStyle="bold|italic"
+                            android:text="Unscramble App"/>
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_gravity="bottom"
+                            android:background="@color/superhero_item_name"
+                            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textColor="@color/white"
+                                android:text="MVVM - LiveData"
+                                />
+                        </FrameLayout>
+                    </FrameLayout>
+
+                </androidx.cardview.widget.CardView>
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                >
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/adv_nav_fragments_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardBackgroundColor="@color/background_card_color"
+                    >
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        >
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_gravity="center"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/img_nav_adv"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|top"
+                            android:textColor="@color/white"
+                            android:textStyle="bold|italic"
+                            android:text="Cupcake App"/>
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_gravity="bottom"
+                            android:background="@color/superhero_item_name"
+                            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textColor="@color/white"
+                                android:text="Advanced Nav-Frags"
+                                />
+                        </FrameLayout>
+                    </FrameLayout>
+
+                </androidx.cardview.widget.CardView>
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                >
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/room_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardBackgroundColor="@color/background_card_color"
+                    >
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        >
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_gravity="center"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/img_room"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|top"
+                            android:textColor="@color/white"
+                            android:textStyle="bold|italic"
+                            android:text="Bus Schedule App"/>
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_gravity="bottom"
+                            android:background="@color/superhero_item_name"
+                            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textColor="@color/white"
+                                android:text="ROOM-Flow"
+                                />
+                        </FrameLayout>
+                    </FrameLayout>
+
+                </androidx.cardview.widget.CardView>
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                >
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/adv_room_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardBackgroundColor="@color/background_card_color"
+                    >
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        >
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_gravity="center"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/img_adv_room"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|top"
+                            android:textColor="@color/white"
+                            android:textStyle="bold|italic"
+                            android:text="Inventory App"/>
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_gravity="bottom"
+                            android:background="@color/superhero_item_name"
+                            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textColor="@color/white"
+                                android:text="Advanced ROOM"
+                                />
+                        </FrameLayout>
+                    </FrameLayout>
+
+                </androidx.cardview.widget.CardView>
+            </FrameLayout>
+
+
+
+        </LinearLayout>
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <FrameLayout
-            android:layout_width="0dp"
-            android:layout_height="150dp"
-            android:layout_weight="1"
-            >
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/super_hero_button"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="8dp"
-                app:cardCornerRadius="16dp"
-                app:cardBackgroundColor="@color/background_card_color"
-                >
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    >
-                    <ImageView
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:layout_gravity="center"
-                        android:scaleType="fitCenter"
-                        android:src="@drawable/img_android_retrofit"
-                        />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center|top"
-                        android:textColor="@color/white"
-                        android:textStyle="bold|italic"
-                        android:text="Superhero App"/>
-                    <FrameLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:layout_gravity="bottom"
-                        android:background="@color/superhero_item_name"
-                        >
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:textColor="@color/white"
-                            android:text="RV-Retrofit"
-                            />
-                    </FrameLayout>
-                </FrameLayout>
-
-            </androidx.cardview.widget.CardView>
-        </FrameLayout>
-
-        <FrameLayout
-            android:layout_width="0dp"
-            android:layout_height="150dp"
-            android:layout_weight="1"
-            >
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/settings_button"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="8dp"
-                app:cardCornerRadius="16dp"
-                app:cardBackgroundColor="@color/background_card_color"
-                >
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    >
-                    <ImageView
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:layout_gravity="center"
-                        android:scaleType="fitCenter"
-                        android:src="@drawable/img_settings"
-                        />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center|top"
-                        android:textColor="@color/white"
-                        android:textStyle="bold|italic"
-                        android:text="Settings App"/>
-                    <FrameLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:layout_gravity="bottom"
-                        android:background="@color/superhero_item_name"
-                        >
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:textColor="@color/white"
-                            android:text="DataStore"
-                            />
-                    </FrameLayout>
-                </FrameLayout>
-
-            </androidx.cardview.widget.CardView>
-        </FrameLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <FrameLayout
-            android:layout_width="0dp"
-            android:layout_height="150dp"
-            android:layout_weight="1"
-            >
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/nav_fragments_button"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="8dp"
-                app:cardCornerRadius="16dp"
-                app:cardBackgroundColor="@color/background_card_color"
-                >
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    >
-                    <ImageView
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:layout_gravity="center"
-                        android:scaleType="fitCenter"
-                        android:src="@drawable/img_nav_fragments"
-                        />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center|top"
-                        android:textColor="@color/white"
-                        android:textStyle="bold|italic"
-                        android:text="Words App"/>
-                    <FrameLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:layout_gravity="bottom"
-                        android:background="@color/superhero_item_name"
-                        >
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:textColor="@color/white"
-                            android:text="Nav-Fragments"
-                            />
-                    </FrameLayout>
-                </FrameLayout>
-
-            </androidx.cardview.widget.CardView>
-        </FrameLayout>
-
-        <FrameLayout
-            android:layout_width="0dp"
-            android:layout_height="150dp"
-            android:layout_weight="1"
-            >
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/MVVM_button"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="8dp"
-                app:cardCornerRadius="16dp"
-                app:cardBackgroundColor="@color/background_card_color"
-                >
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    >
-                    <ImageView
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:layout_gravity="center"
-                        android:scaleType="fitCenter"
-                        android:src="@drawable/img_mvvm"
-                        />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center|top"
-                        android:textColor="@color/white"
-                        android:textStyle="bold|italic"
-                        android:text="Unscramble App"/>
-                    <FrameLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:layout_gravity="bottom"
-                        android:background="@color/superhero_item_name"
-                        >
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:textColor="@color/white"
-                            android:text="MVVM - LiveData"
-                            />
-                    </FrameLayout>
-                </FrameLayout>
-
-            </androidx.cardview.widget.CardView>
-        </FrameLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <FrameLayout
-            android:layout_width="0dp"
-            android:layout_height="150dp"
-            android:layout_weight="1"
-            >
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/adv_nav_fragments_button"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="8dp"
-                app:cardCornerRadius="16dp"
-                app:cardBackgroundColor="@color/background_card_color"
-                >
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    >
-                    <ImageView
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:layout_gravity="center"
-                        android:scaleType="fitCenter"
-                        android:src="@drawable/img_nav_adv"
-                        />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center|top"
-                        android:textColor="@color/white"
-                        android:textStyle="bold|italic"
-                        android:text="Cupcake App"/>
-                    <FrameLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:layout_gravity="bottom"
-                        android:background="@color/superhero_item_name"
-                        >
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:textColor="@color/white"
-                            android:text="Advanced Nav-Frags"
-                            />
-                    </FrameLayout>
-                </FrameLayout>
-
-            </androidx.cardview.widget.CardView>
-        </FrameLayout>
-
-        <FrameLayout
-            android:layout_width="0dp"
-            android:layout_height="150dp"
-            android:layout_weight="1"
-            >
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/room_button"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="8dp"
-                app:cardCornerRadius="16dp"
-                app:cardBackgroundColor="@color/background_card_color"
-                >
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    >
-                    <ImageView
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:layout_gravity="center"
-                        android:scaleType="fitCenter"
-                        android:src="@drawable/img_room"
-                        />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center|top"
-                        android:textColor="@color/white"
-                        android:textStyle="bold|italic"
-                        android:text="Bus Schedule App"/>
-                    <FrameLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:layout_gravity="bottom"
-                        android:background="@color/superhero_item_name"
-                        >
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:textColor="@color/white"
-                            android:text="ROOM-Flow"
-                            />
-                    </FrameLayout>
-                </FrameLayout>
-
-            </androidx.cardview.widget.CardView>
-        </FrameLayout>
-
-
-
-    </LinearLayout>
-
-</LinearLayout>
+</ScrollView>

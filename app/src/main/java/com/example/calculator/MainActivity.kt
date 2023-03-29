@@ -7,6 +7,7 @@ import com.example.calculator.busscheduleapp.BusMainActivity
 import com.example.calculator.cukcakeapp.CupcakeMainActivity
 import com.example.calculator.databinding.ActivityMainBinding
 import com.example.calculator.imcapp.ImcActivity
+import com.example.calculator.inventoryapp.InventoryMainActivity
 import com.example.calculator.settingsapp.SettingsActivity
 import com.example.calculator.superheroapp.SuperHeroListActivity
 import com.example.calculator.todoapp.TodoActivity
@@ -30,6 +31,7 @@ class MainActivity : AppCompatActivity() {
             MVVMButton.setOnClickListener { navigateToUnscrambleApp() }
             advNavFragmentsButton.setOnClickListener { navigateToCupcakeApp() }
             roomButton.setOnClickListener { navigateToBusApp() }
+            advRoomButton.setOnClickListener { navigateToInventoryApp() }
         }
     }
 
@@ -69,6 +71,10 @@ class MainActivity : AppCompatActivity() {
     }
     private fun navigateToBusApp(){
         val intent = Intent(this, BusMainActivity::class.java)
+        startActivity(intent)
+    }
+    private fun navigateToInventoryApp(){
+        val intent = Intent(this, InventoryMainActivity::class.java)
         startActivity(intent)
     }
 }

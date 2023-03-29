@@ -38,8 +38,7 @@ class FullScheduleFragment: Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentFullScheduleBinding.inflate(inflater, container, false)
-        val view = binding.root
-        return view
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -62,7 +61,7 @@ class FullScheduleFragment: Fragment() {
         // best practice, and in the next step we'll see how to improve this.
         GlobalScope.launch(Dispatchers.IO) {
             lifecycle.coroutineScope.launch {
-                viewModel.fullSchedule().collect() {
+                viewModel.fullSchedule().collect {
                     busStopAdapter.submitList(it)
                 }
             }
