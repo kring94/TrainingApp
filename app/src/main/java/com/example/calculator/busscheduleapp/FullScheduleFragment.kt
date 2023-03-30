@@ -10,6 +10,7 @@ import androidx.lifecycle.coroutineScope
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.calculator.MainApplication
 import com.example.calculator.busscheduleapp.adapters.BusStopAdapter
 import com.example.calculator.busscheduleapp.viewmodels.BusScheduleViewModel
 import com.example.calculator.busscheduleapp.viewmodels.BusScheduleViewModelFactory
@@ -22,7 +23,7 @@ class FullScheduleFragment: Fragment() {
 
     private val viewModel: BusScheduleViewModel by activityViewModels {
         BusScheduleViewModelFactory(
-            (activity?.application as BusScheduleApplication).database.scheduleDao()
+            (activity?.application as MainApplication).database.scheduleDao()
         )
     }
 

@@ -7,10 +7,25 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
+import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import com.example.calculator.MainApplication
 import com.example.calculator.databinding.FragmentAddItemBinding
+import com.example.calculator.inventoryapp.data.Item
+import com.example.calculator.inventoryapp.viewmodels.InventoryViewModel
+import com.example.calculator.inventoryapp.viewmodels.InventoryViewModelFactory
 
 class AddItemFragment : Fragment() {
+
+    private val viewModel: InventoryViewModel by activityViewModels {
+        InventoryViewModelFactory(
+            (activity?.application as MainApplication).databaseInventory
+                .itemDao()
+        )
+    }
+
+    lateinit var item: Item
 
     private val navigationArgs: ItemDetailFragmentArgs by navArgs()
 
@@ -29,9 +44,35 @@ class AddItemFragment : Fragment() {
         return binding.root
     }
 
+    private fun isEntryValid(): Boolean {
+        return viewModel.isEntryValid(
+            binding.itemName.text.toString(),
+            binding.itemPrice.text.toString(),
+            binding.itemCount.text.toString()
+        )
+    }
+
+    private fun addNewItem() {
+        if (isEntryValid()) {
+            viewModel.addNewItem(
+                binding.itemName.text.toString(),
+                binding.itemPrice.text.toString(),
+                binding.itemCount.text.toString(),
+            )
+            val action = AddItemFragmentDirections.actionAddItemFragmentToItemListFragment()
+            findNavController().navigate(action)
+        }
+    }
+
     /**
      * Called before fragment is destroyed.
      */
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.saveAction.setOnClickListener {
+            addNewItem()
+        }
+    }
     override fun onDestroyView() {
         super.onDestroyView()
         // Hide keyboard.
@@ -40,4 +81,6 @@ class AddItemFragment : Fragment() {
         inputMethodManager.hideSoftInputFromWindow(requireActivity().currentFocus?.windowToken, 0)
         _binding = null
     }
+
+
 }
