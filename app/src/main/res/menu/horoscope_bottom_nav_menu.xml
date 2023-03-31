@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/listFragment"
+        android:icon="@drawable/ic_error"
+        android:title=".Listado"
+        />
+    <item
+        android:id="@+id/compatibilityFragment"
+        android:icon="@drawable/ic_dark_mode"
+        android:title=".Compatibility"
+        />
+    <item
+        android:id="@+id/informationFragment"
+        android:icon="@drawable/ic_bluetooth"
+        android:title=".Information"/>
+</menu>
