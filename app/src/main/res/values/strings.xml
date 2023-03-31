@@ -122,4 +122,10 @@
     <string name="currency_symbol">$</string>
     <string name="edit_item">Edit Item</string>
     <string name="add_new_item">Add new item</string>
+
+    <!--    Horoscope App-->
+    <string name="horoscope_app_name">Horoscope</string>
+    <string name="horoscope_information">Information</string>
+    <string name="horoscope_compatibility">Compatibility</string>
+    <string name="horoscope_List">List</string>
 </resources>

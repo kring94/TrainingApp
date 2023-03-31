@@ -6,6 +6,7 @@ import android.os.Bundle
 import com.example.calculator.busscheduleapp.BusMainActivity
 import com.example.calculator.cukcakeapp.CupcakeMainActivity
 import com.example.calculator.databinding.ActivityMainBinding
+import com.example.calculator.horoscopeapp.ui.HoroscopeMainActivity
 import com.example.calculator.imcapp.ImcActivity
 import com.example.calculator.inventoryapp.InventoryMainActivity
 import com.example.calculator.settingsapp.SettingsActivity
@@ -32,6 +33,7 @@ class MainActivity : AppCompatActivity() {
             advNavFragmentsButton.setOnClickListener { navigateToCupcakeApp() }
             roomButton.setOnClickListener { navigateToBusApp() }
             advRoomButton.setOnClickListener { navigateToInventoryApp() }
+            cleanAchAppButton.setOnClickListener { navigateToHoroscopeApp() }
         }
     }
 
@@ -75,6 +77,11 @@ class MainActivity : AppCompatActivity() {
     }
     private fun navigateToInventoryApp(){
         val intent = Intent(this, InventoryMainActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun navigateToHoroscopeApp(){
+        val intent = Intent(this, HoroscopeMainActivity::class.java)
         startActivity(intent)
     }
 }
