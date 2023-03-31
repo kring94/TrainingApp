@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/itemListFragment"
-        android:name="com.example.calculator.inventoryapp.ItemListFragment"
+        android:name="com.example.calculator.inventoryapp.fragments.ItemListFragment"
         android:label="@string/inventory_app_name"
         tools:layout="@layout/fragment_item_list">
         <action
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/itemDetailFragment"
-        android:name="com.example.calculator.inventoryapp.ItemDetailFragment"
+        android:name="com.example.calculator.inventoryapp.fragments.ItemDetailFragment"
         android:label="@string/item_detail_fragment_title"
         tools:layout="@layout/fragment_item_detail">
         <argument
@@ -31,7 +31,7 @@
     </fragment>
     <fragment
         android:id="@+id/addItemFragment"
-        android:name="com.example.calculator.inventoryapp.AddItemFragment"
+        android:name="com.example.calculator.inventoryapp.fragments.AddItemFragment"
         android:label="{title}"
         tools:layout="@layout/fragment_add_item">
         <argument
