@@ -7,7 +7,9 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.example.calculator.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class HoroscopeMainActivity : AppCompatActivity(R.layout.activity_horoscope_main) {
 
     private lateinit var navController: NavController
@@ -21,5 +23,9 @@ class HoroscopeMainActivity : AppCompatActivity(R.layout.activity_horoscope_main
         navController = navHostFragment.navController
 
         bottomNavigationView.setupWithNavController(navController)
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        return navController.navigateUp() || super.onSupportNavigateUp()
     }
 }
