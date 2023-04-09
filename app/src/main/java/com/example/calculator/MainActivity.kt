@@ -9,6 +9,7 @@ import com.example.calculator.databinding.ActivityMainBinding
 import com.example.calculator.horoscopeapp.ui.HoroscopeMainActivity
 import com.example.calculator.imcapp.ImcActivity
 import com.example.calculator.inventoryapp.InventoryMainActivity
+import com.example.calculator.quotesapp.view.QuotesMainActivity
 import com.example.calculator.settingsapp.SettingsActivity
 import com.example.calculator.superheroapp.SuperHeroListActivity
 import com.example.calculator.todoapp.TodoActivity
@@ -34,6 +35,8 @@ class MainActivity : AppCompatActivity() {
             roomButton.setOnClickListener { navigateToBusApp() }
             advRoomButton.setOnClickListener { navigateToInventoryApp() }
             cleanAchAppButton.setOnClickListener { navigateToHoroscopeApp() }
+            quoteButton.setOnClickListener { navigateToQuoteApp() }
+
         }
     }
 
@@ -82,6 +85,10 @@ class MainActivity : AppCompatActivity() {
 
     private fun navigateToHoroscopeApp(){
         val intent = Intent(this, HoroscopeMainActivity::class.java)
+        startActivity(intent)
+    }
+    private fun navigateToQuoteApp(){
+        val intent = Intent(this, QuotesMainActivity::class.java)
         startActivity(intent)
     }
 }

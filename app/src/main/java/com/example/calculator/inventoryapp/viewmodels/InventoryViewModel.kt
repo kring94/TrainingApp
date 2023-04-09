@@ -8,7 +8,6 @@ import com.example.calculator.inventoryapp.data.Item
 import com.example.calculator.inventoryapp.data.ItemDao
 import kotlinx.coroutines.launch
 
-
 class InventoryViewModel(private val itemDao: ItemDao): ViewModel() {
 
     val allItems: LiveData<List<Item>> = itemDao.getItems().asLiveData()

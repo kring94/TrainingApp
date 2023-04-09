@@ -9,7 +9,7 @@
     <LinearLayout
 
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         tools:context=".MainActivity"
         android:padding="16dp">
@@ -51,7 +51,7 @@
                             android:layout_gravity="center|top"
                             android:textColor="@color/white"
                             android:textStyle="bold|italic"
-                            android:text="IMC App"/>
+                            android:text="@string/imc_app"/>
                         <FrameLayout
                             android:layout_width="match_parent"
                             android:layout_height="30dp"
@@ -63,7 +63,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
                                 android:textColor="@color/white"
-                                android:text="Basics"
+                                android:text="@string/basics"
                                 />
                         </FrameLayout>
                     </FrameLayout>
@@ -102,7 +102,7 @@
                             android:layout_gravity="center|top"
                             android:textColor="@color/white"
                             android:textStyle="bold|italic"
-                            android:text="TODO App"/>
+                            android:text="@string/todo_app"/>
                         <FrameLayout
                             android:layout_width="match_parent"
                             android:layout_height="30dp"
@@ -114,7 +114,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
                                 android:textColor="@color/white"
-                                android:text="Recycler View"
+                                android:text="@string/recycler_view"
                                 />
                         </FrameLayout>
                     </FrameLayout>
@@ -160,7 +160,7 @@
                             android:layout_gravity="center|top"
                             android:textColor="@color/white"
                             android:textStyle="bold|italic"
-                            android:text="Superhero App"/>
+                            android:text="@string/superhero_app"/>
                         <FrameLayout
                             android:layout_width="match_parent"
                             android:layout_height="30dp"
@@ -172,7 +172,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
                                 android:textColor="@color/white"
-                                android:text="RV-Retrofit"
+                                android:text="@string/rv_retrofit"
                                 />
                         </FrameLayout>
                     </FrameLayout>
@@ -211,7 +211,7 @@
                             android:layout_gravity="center|top"
                             android:textColor="@color/white"
                             android:textStyle="bold|italic"
-                            android:text="Settings App"/>
+                            android:text="@string/settings_app"/>
                         <FrameLayout
                             android:layout_width="match_parent"
                             android:layout_height="30dp"
@@ -223,7 +223,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
                                 android:textColor="@color/white"
-                                android:text="DataStore"
+                                android:text="@string/datastore"
                                 />
                         </FrameLayout>
                     </FrameLayout>
@@ -269,7 +269,7 @@
                             android:layout_gravity="center|top"
                             android:textColor="@color/white"
                             android:textStyle="bold|italic"
-                            android:text="Words App"/>
+                            android:text="@string/words_app"/>
                         <FrameLayout
                             android:layout_width="match_parent"
                             android:layout_height="30dp"
@@ -281,7 +281,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
                                 android:textColor="@color/white"
-                                android:text="Nav-Fragments"
+                                android:text="@string/nav_fragments"
                                 />
                         </FrameLayout>
                     </FrameLayout>
@@ -320,7 +320,7 @@
                             android:layout_gravity="center|top"
                             android:textColor="@color/white"
                             android:textStyle="bold|italic"
-                            android:text="Unscramble App"/>
+                            android:text="@string/unscramble_app"/>
                         <FrameLayout
                             android:layout_width="match_parent"
                             android:layout_height="30dp"
@@ -332,7 +332,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
                                 android:textColor="@color/white"
-                                android:text="MVVM - LiveData"
+                                android:text="@string/mvvm_livedata"
                                 />
                         </FrameLayout>
                     </FrameLayout>
@@ -378,7 +378,7 @@
                             android:layout_gravity="center|top"
                             android:textColor="@color/white"
                             android:textStyle="bold|italic"
-                            android:text="Cupcake App"/>
+                            android:text="@string/cupcake_app"/>
                         <FrameLayout
                             android:layout_width="match_parent"
                             android:layout_height="30dp"
@@ -390,7 +390,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
                                 android:textColor="@color/white"
-                                android:text="Advanced Nav-Frags"
+                                android:text="@string/advanced_nav_frags"
                                 />
                         </FrameLayout>
                     </FrameLayout>
@@ -429,7 +429,7 @@
                             android:layout_gravity="center|top"
                             android:textColor="@color/white"
                             android:textStyle="bold|italic"
-                            android:text="Bus Schedule App"/>
+                            android:text="@string/bus_schedule_app"/>
                         <FrameLayout
                             android:layout_width="match_parent"
                             android:layout_height="30dp"
@@ -441,7 +441,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
                                 android:textColor="@color/white"
-                                android:text="ROOM-Flow"
+                                android:text="@string/room_flow"
                                 />
                         </FrameLayout>
                     </FrameLayout>
@@ -487,7 +487,7 @@
                             android:layout_gravity="center|top"
                             android:textColor="@color/white"
                             android:textStyle="bold|italic"
-                            android:text="Inventory App"/>
+                            android:text="@string/inventory_app"/>
                         <FrameLayout
                             android:layout_width="match_parent"
                             android:layout_height="30dp"
@@ -499,7 +499,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
                                 android:textColor="@color/white"
-                                android:text="Advanced ROOM"
+                                android:text="@string/advanced_room"
                                 />
                         </FrameLayout>
                     </FrameLayout>
@@ -538,7 +538,7 @@
                             android:layout_gravity="center|top"
                             android:textColor="@color/white"
                             android:textStyle="bold|italic"
-                            android:text="Horoscope App"/>
+                            android:text="@string/horoscope_app"/>
                         <FrameLayout
                             android:layout_width="match_parent"
                             android:layout_height="30dp"
@@ -550,7 +550,66 @@
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
                                 android:textColor="@color/white"
-                                android:text="Clean Arch"
+                                android:text="@string/clean_arch"
+                                />
+                        </FrameLayout>
+                    </FrameLayout>
+
+                </androidx.cardview.widget.CardView>
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                >
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/quote_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardBackgroundColor="@color/background_card_color"
+                    >
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        >
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_gravity="center"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/img_quote"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|top"
+                            android:textColor="@color/white"
+                            android:textStyle="bold|italic"
+                            android:text="@string/quote_app"/>
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_gravity="bottom"
+                            android:background="@color/superhero_item_name"
+                            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textColor="@color/white"
+                                android:text="@string/clean_arch_2"
                                 />
                         </FrameLayout>
                     </FrameLayout>

@@ -15,7 +15,8 @@ import com.example.calculator.inventoryapp.adapters.ItemListAdapter
 import com.example.calculator.inventoryapp.viewmodels.InventoryViewModel
 import com.example.calculator.inventoryapp.viewmodels.InventoryViewModelFactory
 
-class ItemListFragment : Fragment() {
+
+class ItemListFragment: Fragment() {
 
     private var _binding: FragmentItemListBinding? = null
     private val binding get() = _binding!!

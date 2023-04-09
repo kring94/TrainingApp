@@ -9,6 +9,7 @@ import com.example.calculator.R
 
 
 class InventoryMainActivity : AppCompatActivity(R.layout.activity_inventory_main) {
+
     private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {

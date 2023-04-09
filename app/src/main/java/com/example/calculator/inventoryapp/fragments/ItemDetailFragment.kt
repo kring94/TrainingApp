@@ -17,6 +17,7 @@ import com.example.calculator.inventoryapp.viewmodels.InventoryViewModel
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.example.calculator.inventoryapp.viewmodels.InventoryViewModelFactory
 
+
 class ItemDetailFragment : Fragment() {
 
     private val navigationArgs: ItemDetailFragmentArgs by navArgs()

@@ -17,6 +17,8 @@ import com.example.calculator.inventoryapp.data.Item
 import com.example.calculator.inventoryapp.viewmodels.InventoryViewModel
 import com.example.calculator.inventoryapp.viewmodels.InventoryViewModelFactory
 
+
+
 class AddItemFragment : Fragment() {
 
     private val viewModel: InventoryViewModel by activityViewModels {

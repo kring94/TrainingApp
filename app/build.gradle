@@ -3,8 +3,8 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'androidx.navigation.safeargs.kotlin'
     id 'kotlin-android'
-    id 'kotlin-kapt'
-    id 'com.google.dagger.hilt.android'
+    id 'kotlin-kapt'//Dagger hilt
+    id 'com.google.dagger.hilt.android'//Dagger hilt
 }
 
 android {
@@ -58,6 +58,7 @@ dependencies {
     def nav_version = "2.5.3"
     def room_version = '2.5.1'
     def lifecycle_version = '2.6.1'
+    def hilt_version = '2.44'
 
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.1'
@@ -83,8 +84,8 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
     // Dagger Hilt
-    implementation "com.google.dagger:hilt-android:2.44"
-    kapt "com.google.dagger:hilt-compiler:2.44"
+    implementation "com.google.dagger:hilt-android:$hilt_version"
+    kapt "com.google.dagger:hilt-compiler:$hilt_version"
 
 
     testImplementation 'junit:junit:4.13.2'

@@ -128,4 +128,26 @@
     <string name="horoscope_information">Information</string>
     <string name="horoscope_compatibility">Compatibility</string>
     <string name="horoscope_List">List</string>
+    <string name="imc_app">IMC App</string>
+    <string name="basics">Basics</string>
+    <string name="todo_app">TODO App</string>
+    <string name="recycler_view">Recycler View</string>
+    <string name="superhero_app">Superhero App</string>
+    <string name="rv_retrofit">RV-Retrofit</string>
+    <string name="settings_app">Settings App</string>
+    <string name="datastore">DataStore</string>
+    <string name="words_app">Words App</string>
+    <string name="nav_fragments">Nav-Fragments</string>
+    <string name="unscramble_app">Unscramble App</string>
+    <string name="mvvm_livedata">MVVM - LiveData</string>
+    <string name="cupcake_app">Cupcake App</string>
+    <string name="advanced_nav_frags">Advanced Nav-Frags</string>
+    <string name="bus_schedule_app">Bus Schedule App</string>
+    <string name="room_flow">ROOM-Flow</string>
+    <string name="inventory_app">Inventory App</string>
+    <string name="advanced_room">Advanced ROOM</string>
+    <string name="horoscope_app">Horoscope App</string>
+    <string name="clean_arch">Clean Arch</string>
+    <string name="quote_app">Quote App</string>
+    <string name="clean_arch_2">Clean Arch 2</string>
 </resources>
