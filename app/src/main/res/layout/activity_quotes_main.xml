@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/blue_700"
-    tools:context=".quotesapp.view.QuotesMainActivity">
+    tools:context=".quotesapp.ui.view.QuotesMainActivity">
 
     <TextView
         android:id="@+id/tvQuote"
@@ -38,5 +38,15 @@
         app:layout_constraintBottom_toBottomOf="parent"
         tools:text="Hello there!"
         />
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

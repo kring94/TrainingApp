@@ -9,7 +9,7 @@ import com.example.calculator.databinding.ActivityMainBinding
 import com.example.calculator.horoscopeapp.ui.HoroscopeMainActivity
 import com.example.calculator.imcapp.ImcActivity
 import com.example.calculator.inventoryapp.InventoryMainActivity
-import com.example.calculator.quotesapp.view.QuotesMainActivity
+import com.example.calculator.quotesapp.ui.view.QuotesMainActivity
 import com.example.calculator.settingsapp.SettingsActivity
 import com.example.calculator.superheroapp.SuperHeroListActivity
 import com.example.calculator.todoapp.TodoActivity

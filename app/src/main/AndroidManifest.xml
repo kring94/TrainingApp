@@ -15,7 +15,7 @@
         android:theme="@style/Theme.Calculator"
         tools:targetApi="31">
         <activity
-            android:name=".quotesapp.view.QuotesMainActivity"
+            android:name=".quotesapp.ui.view.QuotesMainActivity"
             android:exported="false"
             android:theme="@style/Theme.Quote"/>
         <activity
