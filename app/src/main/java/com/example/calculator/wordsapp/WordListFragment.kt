@@ -56,7 +56,7 @@ class WordListFragment : Fragment() {
             DividerItemDecoration(requireContext(), DividerItemDecoration.VERTICAL)
         )
 
-        var title = getString(R.string.detail_prefix) + " " + letterId
+//        var title = getString(R.string.detail_prefix) + " " + letterId
     }
 
     override fun onDestroyView() {

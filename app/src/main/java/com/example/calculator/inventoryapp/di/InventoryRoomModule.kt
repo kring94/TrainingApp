@@ -11,18 +11,18 @@ import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 
 
-@Module
-@InstallIn(SingletonComponent::class)
-object InventoryRoomModule {
-
-    private const val ITEM_DATABASE_NAME = "item_database"
-
-    @Singleton
-    @Provides
-    fun provideRoom(@ApplicationContext context: Context) =
-        Room.databaseBuilder(context, ItemRoomDatabase::class.java, ITEM_DATABASE_NAME).build()
-
-    @Singleton
-    @Provides
-    fun provideItemDao(db:ItemRoomDatabase) = db.itemDao()
-}
+//@Module
+//@InstallIn(SingletonComponent::class)
+//object InventoryRoomModule {
+//
+//    private const val ITEM_DATABASE_NAME = "item_database"
+//
+//    @Singleton
+//    @Provides
+//    fun provideRoom(@ApplicationContext context: Context) =
+//        Room.databaseBuilder(context, ItemRoomDatabase::class.java, ITEM_DATABASE_NAME).build()
+//
+//    @Singleton
+//    @Provides
+//    fun provideItemDao(db:ItemRoomDatabase) = db.itemDao()
+//}

@@ -4,10 +4,11 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
-import androidx.lifecycle.Observer
 import com.example.calculator.databinding.ActivityQuotesMainBinding
 import com.example.calculator.quotesapp.ui.viewmodel.QuoteViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class QuotesMainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityQuotesMainBinding
