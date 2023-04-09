@@ -1,15 +1,15 @@
 package com.example.calculator.quotesapp.domain
 
-import com.example.calculator.quotesapp.data.model.QuoteModel
-import com.example.calculator.quotesapp.data.model.QuoteProvider
+import com.example.calculator.quotesapp.data.QuoteRepository
+import com.example.calculator.quotesapp.domain.model.Quote
 import javax.inject.Inject
 
 class GetRandomQuoteUseCase @Inject constructor(
-    private val quoteProvider: QuoteProvider
+    private val repository: QuoteRepository
 ){
 
-    operator fun invoke(): QuoteModel?{
-        val quotes = quoteProvider.quotes
+    suspend operator fun invoke(): Quote?{
+        val quotes = repository.getAllQuotesFromDatabase()
         if(!quotes.isNullOrEmpty()){
             val randomNumber = (quotes.indices).random()
             return quotes[randomNumber]
