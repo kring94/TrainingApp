@@ -19,7 +19,7 @@ class QuotesMainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityQuotesMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        quoteViewModel.onCreated()
 
         quoteViewModel.quoteModel.observe(this) { currentQuote ->
             binding.apply {
