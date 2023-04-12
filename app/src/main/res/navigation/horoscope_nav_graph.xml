@@ -12,9 +12,9 @@
         tools:layout="@layout/fragment_list" />
     <fragment
         android:id="@+id/compatibilityFragment"
-        android:name="com.example.calculator.horoscopeapp.ui.compatibility.CompatibilityFragment"
+        android:name="com.example.calculator.horoscopeapp.ui.lucky.LuckyFragment"
         android:label="@string/horoscope_compatibility"
-        tools:layout="@layout/fragment_compatibility" />
+        tools:layout="@layout/fragment_lucky" />
     <fragment
         android:id="@+id/informationFragment"
         android:name="com.example.calculator.horoscopeapp.ui.information.InformationFragment"
