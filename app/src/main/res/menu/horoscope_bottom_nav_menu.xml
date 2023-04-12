@@ -3,7 +3,7 @@
     <item
         android:id="@+id/listFragment"
         android:icon="@drawable/ic_error"
-        android:title=".Listado"
+        android:title=".List"
         />
     <item
         android:id="@+id/compatibilityFragment"
