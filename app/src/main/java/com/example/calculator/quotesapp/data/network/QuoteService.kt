@@ -1,6 +1,5 @@
 package com.example.calculator.quotesapp.data.network
 
-import com.example.calculator.quotesapp.core.RetrofitHelper
 import com.example.calculator.quotesapp.data.model.QuoteModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext

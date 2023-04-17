@@ -17,6 +17,7 @@ import com.example.calculator.R
 import com.example.calculator.databinding.FragmentLuckyBinding
 import com.example.calculator.horoscopeapp.ui.list.ListViewModel
 import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class LuckyFragment : Fragment() {
@@ -25,6 +26,9 @@ class LuckyFragment : Fragment() {
 
     private var _binding: FragmentLuckyBinding? = null
     private val binding get() = _binding!!
+
+    @Inject
+    lateinit var randomCardsProvider: RandomCardsProvider
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -76,22 +80,9 @@ class LuckyFragment : Fragment() {
         }
     }
     private fun prepareCard() {
-        val image = when((0..11).random()){
-            0-> R.drawable.card_aquarius
-            1-> R.drawable.card_aries
-            2-> R.drawable.card_cancer
-            3-> R.drawable.card_scorpio
-            4-> R.drawable.card_sagittarius
-            5-> R.drawable.card_leo
-            6-> R.drawable.card_libra
-            7-> R.drawable.card_capricorn
-            8-> R.drawable.card_gemini
-            9-> R.drawable.card_pisces
-            10-> R.drawable.card_taurus
-            11-> R.drawable.card_virgo
-            else -> R.drawable.card_blank
-        }
+        val luck = randomCardsProvider.getLucky()
 
-        binding.viewFrontContainer.ivFrontCard.setImageDrawable(ContextCompat.getDrawable(requireContext(),image))
+        binding.viewFrontContainer.ivFrontCard.setImageDrawable(ContextCompat.getDrawable(requireContext(),luck.image))
+        binding.tvLuckyInfo.text = getString(luck.text)
     }
 }
