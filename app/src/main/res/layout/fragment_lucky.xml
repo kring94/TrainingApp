@@ -21,14 +21,13 @@
         android:id="@+id/tvLuckyInfo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="16dp"
         android:gravity="center_horizontal"
+        android:paddingBottom="16dp"
         android:textColor="@color/white"
-        android:text="Day's Lucky"
-        tools:visibility="visible"
-        tools:text="Day's Lucky"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Day's Lucky"
+        tools:visibility="visible" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

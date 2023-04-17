@@ -45,7 +45,7 @@ class RandomCardsProvider @Inject constructor() {
                 LuckyModel(R.drawable.card_virgo, R.string.app_name)
             }
             else -> {
-                LuckyModel(R.drawable.card_back, R.string.app_name)
+                LuckyModel(R.drawable.card_blank, R.string.app_name)
             }
         }
 
