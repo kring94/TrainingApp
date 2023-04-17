@@ -60,6 +60,7 @@ dependencies {
     def lifecycle_version = '2.6.1'
     def hilt_version = '2.44'
     def coroutines_version = '1.6.0'
+    def lottieVersion = "6.0.0"
 
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.1'
@@ -88,6 +89,12 @@ dependencies {
     // Dagger Hilt
     implementation "com.google.dagger:hilt-android:$hilt_version"
     kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
+    // Lottie for animations
+    implementation "com.airbnb.android:lottie:$lottieVersion"
+
+    /**
+     * Test implementation
+     */
     // Unit test
     testImplementation 'junit:junit:4.13.2'
     testImplementation "io.mockk:mockk:1.12.2"

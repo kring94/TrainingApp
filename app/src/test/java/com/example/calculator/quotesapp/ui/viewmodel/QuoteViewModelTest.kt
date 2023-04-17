@@ -1,17 +1,13 @@
 package com.example.calculator.quotesapp.ui.viewmodel
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
-import androidx.lifecycle.Observer
 import com.example.calculator.quotesapp.domain.GetQuotesUseCase
 import com.example.calculator.quotesapp.domain.GetRandomQuoteUseCase
 import com.example.calculator.quotesapp.domain.model.Quote
 import io.mockk.*
 import io.mockk.impl.annotations.RelaxedMockK
-import junit.framework.TestCase.assertEquals
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.test.*
 import org.junit.After
 import org.junit.Before

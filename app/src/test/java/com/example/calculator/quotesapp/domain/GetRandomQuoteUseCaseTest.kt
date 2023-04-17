@@ -12,7 +12,6 @@ import org.junit.Assert.*
 import org.junit.Before
 import org.junit.Test
 
-/*
 class GetRandomQuoteUseCaseTest {
     @RelaxedMockK
     private lateinit var quoteRepository: QuoteRepository
@@ -50,9 +49,9 @@ class GetRandomQuoteUseCaseTest {
     }
 
 
-}*/
+}
 
-class GetRandomQuoteUseCaseTest {
+/*class GetRandomQuoteUseCaseTest {
 
     private lateinit var useCase: GetRandomQuoteUseCase
     private lateinit var repository: QuoteRepository
@@ -94,5 +93,5 @@ class GetRandomQuoteUseCaseTest {
         coVerify { repository.getAllQuotesFromDatabase() }
         assertNull(result)
     }
-}
+}*/
 
